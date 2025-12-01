@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="author" content="Carlos da rocha">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario HTML</h1>
+    <hr>
+
+    <!--formulario-->
+    <form>
+        <label>nome:</label><br>
+        <input type="text" maxlength="20"
+         placeholder="digite no máximo 20 caracteres" 
+         value="fulano" required><br><br>
+         
+        <label>idade:</label><br>
+        <input type="number" value="18" min="12" max="65">
+        <label> peso:</label><br>
+        <input type="number" value="20" step="0.01">
+        <label>Date:</label><br><br>
+        <label>E-mail:</label><br>
+        <input> type= "email" placeholder="usuario@servidor.com"><br><br>
+        <label>senha:</label><br>
+        <input type="password" placeholder="=Informe a senha"><br><br>
+        <label>Escolaridade:</label><br>
+        <select>
+            <option>Escolha uma opção..</option>
+            <option>Nível fundamental</option>
+            <option>Nível Médio</option>
+            <option>Nível superior</option>
+            <option>Pós graduação</option>
+            <option>Mestrado</option>
+            <option>Doutorado</option>
+        </select><br><br>
+        <label>Enviar arquivo:</label><br>
+        <input type= "file"><br><br>
+
+        <!--botão de einvio-->
+        <button type="submit">Enviar</button>
+        
+        <br><br>
+
+        <!--botaão de reset-->
+        <button type="reset">Limpar</button>
+
+        
+        
+    </form>
+
+    
+</body>
+</html>

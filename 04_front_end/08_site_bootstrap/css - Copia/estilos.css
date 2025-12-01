@@ -1,0 +1,8 @@
+.sombra-navbar{
+    background-image: linear-gradient(to bottom, #000000, #16161d);
+    box-shadow:0px 5px 20px #16161d
+}
+.meu-logo{
+    width: 46px;
+    margin: -5px 0px;
+}
