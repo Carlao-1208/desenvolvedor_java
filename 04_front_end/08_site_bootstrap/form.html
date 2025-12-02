@@ -22,7 +22,7 @@
   <!--navbar-->
   <nav class="navbar navbar-expand-lg bg-navbar border-bottom" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="#000000">
         <img src="img/icons8-skateboard-30.png" alt="ícone" class="meu-logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -48,6 +48,7 @@
   <!--container-->
   <main class="container">
     <h1>cadastro</h1>
+    <h3 class="mt-5">Dados do usuario</h3>
     <hr>
     <form class="mt-5">
       <div class="row">
@@ -90,7 +91,71 @@
 
 
               </div>
+              <div class="col-12 col-md8 col-lg-9">
+                <label class="form-label">e-mail</label>
+                <label class="form-control" type="e-mail"
+                placeholder="usuario@servidor.com" aria-label="defualt input example">
+              <input class="form-control" type="text" placeholder="E-mail" aria-label="defualt input example"></label>
+                
+                <!--telefone-->
+                <div class="col-12 col-md-4 col-lg-3"></div>
+                <label class="form-label">telefone</label>
+                <input class="form-control" type="text" placeholder="(00)00000-0000" aria-label="defualt input example">
+
+
+                <!--nivel de escolaridade-->
+                <div class="col-12 col-md-4 col-lg-3"></div>
+                <label class="form-label">nivel de escolaridade--</label>
+                <select class="form-select" aria-label="Defualt select example">
+                  <option selected>Open this select menu</option>
+                  <option value="fundamental-incompleto">fundamental incompleto</option>
+                  <option value="fundamental-completo">fundamental completo</option>
+                  <option value="medio-incompleto">médio incompleto</option>
+                  <option value="medio-completo">médio completo</option>
+                  <option value="superior-incompleto">superior incompleto</option>
+                  <option value="superior-completo">superior completo</option>
+
+                  <!--profissão-->
+                  <div class="col-12 col-md-6 col-lg-8 mb-3 ">
+                    <label class="form-label">profissão</label>
+                    <input class="form-control" type="text" placeholder="profissão" aria-label="defualt input example">
+
+
+                  <!--salário-->
+                  <div class="col-12 col-md-6 col-lg-8 mb-3 ">
+                    <label class="form-label">Saálario</label>
+                    <input class="form-control" type="number" placeholder="R$" aria-label="defualt input example" step="100">
+              </div>
             </div>
+            <!--fim do row-->
+
+            <!--cep-->
+            <h3 class="mt-5">cep</h3>
+            <hr
+            < class="row">
+              <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <label class="form-label">CEP:</label>
+                <input class="form-control" type="text" placeholder="00000-000" aria-label="defualt input example">
+
+              </div>
+              <!--uf-->
+            <div class="col-12 col-md-6 col-lg-1 mb-3">
+                <label class="form-label">UF:</label>
+                <select class="form-select" aria-label="Defualt select example">
+                  <option selected>Open this select menu</option>
+                  <option value="SP">SP</option>
+                  <option value="RJ">RJ</option>
+                  <option value="MG">MG</option>
+                  <option value="ES">ES</option>
+                  <option value="DF">ES</option>
+                </select>
+            
+           
+            </div>
+            <!--cidade-->
+            <div class="col-12 col-md-6 col-lg-4 mb-3"></div>
+              <label class="form-label">cidade:</label>
+              <input class="form-control" type="text" placeholder="cidade onde reside" aria-label="defualt input example">
 
     </form>
   </main>
