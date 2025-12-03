@@ -77,12 +77,12 @@
               <div class="col-12 col-md-6 col-lg-8 mb-3 ">
                 <label class="form-label">Gênero:</label>
                 <select class="form-select" aria-label="Defualt select example">
-                  
-                    <option selected>Open this select menu</option>
-                    <option value="masculino">masculino</option>
-                    <option value="feminino">feminino</option>
-                    <option value="outro">outro</option>
-                  </select>
+
+                  <option selected>Open this select menu</option>
+                  <option value="masculino">masculino</option>
+                  <option value="feminino">feminino</option>
+                  <option value="outro">outro</option>
+                </select>
 
                 </select>
 
@@ -93,10 +93,11 @@
               </div>
               <div class="col-12 col-md8 col-lg-9">
                 <label class="form-label">e-mail</label>
-                <label class="form-control" type="e-mail"
-                placeholder="usuario@servidor.com" aria-label="defualt input example">
-              <input class="form-control" type="text" placeholder="E-mail" aria-label="defualt input example"></label>
-                
+                <label class="form-control" type="e-mail" placeholder="usuario@servidor.com"
+                  aria-label="defualt input example">
+                  <input class="form-control" type="text" placeholder="E-mail"
+                    aria-label="defualt input example"></label>
+
                 <!--telefone-->
                 <div class="col-12 col-md-4 col-lg-3"></div>
                 <label class="form-label">telefone</label>
@@ -121,45 +122,107 @@
                     <input class="form-control" type="text" placeholder="profissão" aria-label="defualt input example">
 
 
-                  <!--salário-->
-                  <div class="col-12 col-md-6 col-lg-8 mb-3 ">
-                    <label class="form-label">Saálario</label>
-                    <input class="form-control" type="number" placeholder="R$" aria-label="defualt input example" step="100">
-              </div>
-            </div>
-            <!--fim do row-->
+                    <!--salário-->
+                    <div class="col-12 col-md-6 col-lg-8 mb-3 ">
+                      <label class="form-label">Saálario</label>
+                      <input class="form-control" type="number" placeholder="R$" aria-label="defualt input example"
+                        step="100">
+                    </div>
+                  </div>
+                  <!--fim do row-->
 
-            <!--cep-->
-            <h3 class="mt-5">cep</h3>
-            <hr
-            < class="row">
-              <div class="col-12 col-md-6 col-lg-4 mb-3">
-                <label class="form-label">CEP:</label>
-                <input class="form-control" type="text" placeholder="00000-000" aria-label="defualt input example">
+                  <!--cep-->
+                  <h3 class="mt-5">cep</h3>
+                  <hr <class="row">
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <label class="form-label">CEP:</label>
+                    <input class="form-control" type="text" placeholder="00000-000" aria-label="defualt input example">
 
+                  </div>
+                  <!--uf-->
+                  <div class="col-12 col-md-6 col-lg-1 mb-3">
+                    <label class="form-label">UF:</label>
+                    <select class="form-select" aria-label="Defualt select example">
+                      <option selected>Open this select menu</option>
+                      <option value="SP">SP</option>
+                      <option value="RJ">RJ</option>
+                      <option value="MG">MG</option>
+                      <option value="ES">ES</option>
+                      <option value="DF">ES</option>
+                    </select>
+
+
+                  </div>
+                  <!--cidade-->
+                  <div class="col-12 col-md-6 col-lg-4 mb-3"></div>
+                  <label class="form-label">cidade:</label>
+                  <input class="form-control" type="text" placeholder="cidade onde reside"
+                    aria-label="defualt input example">
               </div>
-              <!--uf-->
-            <div class="col-12 col-md-6 col-lg-1 mb-3">
-                <label class="form-label">UF:</label>
-                <select class="form-select" aria-label="Defualt select example">
-                  <option selected>Open this select menu</option>
-                  <option value="SP">SP</option>
-                  <option value="RJ">RJ</option>
-                  <option value="MG">MG</option>
-                  <option value="ES">ES</option>
-                  <option value="DF">ES</option>
-                </select>
-            
-           
+              <!--fim da cidade-->
+
+
+              <!--bairro-->
+              <div class="col-12 col-md-6 col-lg-4 mb-3"></div>
+              <label class="form-label">bairro:</label>
+              <input class="form-control" type="text" placeholder="bairro onde reside"
+                aria-label="defualt input example">
             </div>
-            <!--cidade-->
-            <div class="col-12 col-md-6 col-lg-4 mb-3"></div>
-              <label class="form-label">cidade:</label>
-              <input class="form-control" type="text" placeholder="cidade onde reside" aria-label="defualt input example">
+            <!--fim do bairro-->
+
+            <!--logradouro-->
+            <div class="col-12 col-md-3 col-lg-2 mb-3"></div>
+            <label class="form-label">logradouro:</label>
+            <input class="form-control" type="text" placeholder="rua onde reside" aria-label="defualt input example">
+          </div>
+          <!--fim do logradouro-->
+
+          <!--número-->
+          <div class="col-12 col-md-3 col-lg-2 mb-3"></div>
+          <label class="form-label">número:</label>
+          <input class="form-control" type="text" placeholder="número da residência" aria-label="defualt input example">
+        </div>
+        <!--fim do número-->
+
+        <!--complemento-->
+        <div class="col-12 col-md-6 col-lg-8 mb-3"></div>
+        <label class="form-label ">complemento:</label>
+        <input class="form-control" type="text" placeholder="complemento da residência"
+          aria-label="defualt input example">
+      </div>
+      <!--fim do complemento-->
+
+      <div class="">
+        <button type="submit" class="btn btn-primary mt-5">cadastrar</button>
+      </div>
 
     </form>
   </main>
   <!--fim do container-->
+
+
+
+  <!--footer-->
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-body-secondary">© 2025 Company, Inc</p> <a href="/"
+        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+        aria-label="Bootstrap"> <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+          <use xlink:href="#bootstrap"></use>
+        </svg> </a>
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+      </ul>
+    </footer>
+  </div>
+
+
+  <!--fim do footer-->
 
   </button>
   </div>
