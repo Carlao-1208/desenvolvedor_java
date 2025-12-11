@@ -101,6 +101,63 @@
                 </form>
             </div>
         </div>
+        <!--resultado-->
+        <div class="card shadow result-box" id="resultadoBox">
+            <div class="card-body">
+                <h3 class="mb-3">Resultado</h3>
+
+                <p><strong>Nome:</strong><span id="rNome"></span></p>
+                <p><strong>Data de nascimento:</strong><span id="rNascimento"></span></p>
+                <p><strong>Gênero:</strong><span id="rGênero"></span></p>
+                <p><strong>E-mail:</strong><span id="rEmail"></span></p>
+                <p><strong>Telefone:</strong><span id="Telefone"></span></p>
+                <p><strong>Peso:</strong><span id="rPeso"></span>kg</p>
+                <p><strong>Altura:</strong><span id="rAltura"></span></p>
+                <p><strong>IMC:</strong><span id="rIMC"></span></p>
+                <p><strong>Diagnóstico:</strong><span id="rDiagnóstico"></span></p>
+            </div>
+        </div>
      </div>
+     <!--JavaScript-->
+     <script>
+        document.getElementById("formIMC").addEventListener("Submit", function(e){e.preventDefault();
+
+            //coletando os dados
+            let nome=document.getElementById("nome").value;
+            let nascimento=document.getElementById("nascimento").value;
+            let gênero=document.getElementById("genero").value;
+            let email=document.getElementById("email").value;
+            let telefone=document.getElementById("telefone").value;
+            let peso= parseFloat(document.getElementById("peso").value);
+            let Altura= parseFloat(document.getElementById("Altura").value);
+
+            //IMC
+            let imc = peso = (peso / (altura * altura)).toFixed(2);
+
+            //diagnóstico
+            let diag = "";
+            if (imc < 18.5) diag = "abaixo do peso";
+            else if (imc <24.9) diag ="Peso normal";
+            else if (imc <29.9) diag ="Sobrepeso";
+            else if (imc <34.9) diag = "Obesidade grau 1";
+            else if (imc <39.9) diag = "obesidade grau 2";
+            else diag = "Obesidade móbida";
+
+            //exibindo
+            document.getElementById("rNome").innerText = nome;
+            document.getElementById("rNascimento").innerText = nascimento;
+            document.getElementById("rGenero").innerText = genero;
+            document.getElementById("rEmail").innerText = email;
+            document.getElementById("rTelefone").innerText = telefone;
+            document.getElementById("rPeso").innerText = peso;
+            document.getElementById("rAltura").innerText = altura;
+            document.getElementById("rIMC").innerText = imc;
+            document.getElementById("rDiag").innerText = diag;
+
+            //Mostrar card
+            document.getElementById("resultadoBox").style.display = "block";
+         
+        })
+     </script>
 </body>
 </html>
