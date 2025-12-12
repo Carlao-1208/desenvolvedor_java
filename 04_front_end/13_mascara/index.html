@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máscara de Entrada</title>
+   
+</head>
+<main>
+    <div class="container">
+        <h1> formulario com máscara de entrada</h1>
+        <hr>
+        <form>
+            <div class="row">
+
+                <!--nome-->
+                <div class="col-12 col-md 6 mb-5">
+                    <label class="form-label">Nome:</label>
+                    <input type="text" class="form-control" id="nome">
+                    <h1></h1>
+            </div>
+
+             <!--email-->
+                <div class="col-12 col-md 6 mb-5">
+                    <label class="form-label">E-mail</label>
+                    <input type="text" class="form-control" id="E-mail">
+                    <h1></h1>
+                </div>
+
+                 <!--Data de nascimento-->
+                <div class="col-12 col-md 4 mb-3">
+                    <label class="form-label">Data de nascimento</label>
+                    <input type="date" class="form-control" id="Data de mascimento">
+                    <h1>
+                </div>
+
+                 <!--Cpf-->
+                <div class="col-12 col-md 4 mb-3">
+                    <label class="form-label">CPF</label>
+                    <input type="text" class="form-control" id="CPF">
+                    <h1>
+                </div>
+
+                
+                 <!--telefone-->
+                <div class="col-12 col-md 4 mb-3">
+                    <label class="form-label">Telefone:</label>
+                    <input type="tel" class="form-control" id="telefone">
+                      <h1>
+                </div>
+
+                
+                 <!--CEP-->
+                <div class="col-12 col-md 3 mb-3">
+                    <label class="form-label">CEP</label>
+                    <input type="text" class="form-control" id="CEP">
+                    <h1>
+                </div>
+
+                
+                 <!--endereço-->
+                <div class="col-12 col-md 9 mb-3">
+                    <label class="form-label">Endereço:</label>
+                    <input type="text" class="form-control" id="endereco">
+                    <h1>
+                </div>
+
+                <!--botão-->
+                <div class="d-flex justify-content-center mt-5 mb-5">
+                    <button type="Submit" class="btn btn-success">Enviar</button>
+                </div>
+
+        </form>
+        <hr>
+        <!--resultado-->
+        <div class="row">
+            <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Dados do usuário</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary" id="nomeResult"></h6>
+    <span class="card-text" id="emailResult"></span>
+    <span class="card-text" id="nascimentoResult"></span>
+    <span class="card-text" id="cpfResult"></span>
+    <span class="card-text" id="telefoneresult"></span>
+    <span class="card-text" id="cepResult"></span>
+    <p class="card-text" id="endereçoresult"></p>
+   
+  </div>
+</div>
+        </div>
+    </div>
+</main>
+    <!--meu js-->
+    <script src="js/codigo.js"></script>
+<body>
+     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+    
+</body>
+</html>
