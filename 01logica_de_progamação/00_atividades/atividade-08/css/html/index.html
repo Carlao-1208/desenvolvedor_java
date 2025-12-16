@@ -1,163 +1,114 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>atividade_08-cadastro + IMC</title>
-    <!--bootsrap 5-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        body {
-            background:#f5f5f5;
-        }
-        .result-box {
-            display: none;
-            margin-top: 30px
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IMC - Índice de Massa Corporal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- favicon -->
+    <link href="img/icons8-weight-64.png" rel="shortcut icon" type="image/png">
 </head>
+
 <body>
-    <!-- navbar-->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header>
+        <nav class="navbar bg-dark mb-5" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/icons8-weight-64.png" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    IMC - Índice de Massa Corporal
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
         <div class="container">
-            <a class="navbar-brand" href="#">IMC analyzer</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="nabarNav">
-                <ul class="navbar -nav ms-auto">
-                    <a class="nav-link active">Inicio</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-     </nav>
-
-     <!--container principal-->
-     <div class="container mt-5">
-
-        <h2 class="text-center mb-4">Cadastro e cálculo de IMC</h2>
-
-        <!--forumlário-->
-        <div class="card shadow">
-            <div class="card body">
-                <form id="formIMC">
-
-                    <div class="row">
-                        <div class="col-md6 mb-3">
-                            <label class="form-label">Nome:</label>
-                            <input type="text" id="nome" class="form-control" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Data de nascimento:</label>
-                            <input type="date" id="nascimento" class="form-control" required>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-4 mb-3">
-                            <label class="form-label">Gênero:</label>
-                            <select id="Gênero" class="form-select" required>
-                                <option selected disabled value="">Escolher...</option>
-                                <option>Masculino</option> 
-                                <option>feminino</option> 
-                                <option>outro</option> 
-                            </select>
-                        </div>
-
-                        <div class="col-md4 mb-3">
-                            <label class="form-label">E-mail</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-
-                        <div class="col-md-4 mb-3">
-                            <label class="form-label">E-mail:</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-
-                        <div class="col-md-4 mb-3">
-                            <label class="form-label">Telefone:</label>
-                            <input type="Tel" id="Telefone" class="form-control" required>
-                        </div>
-                        <div class="row">
-
-                            <div class="col-md-4 mb-3">
-                                <label class="form-label">Peso(kg):</label>
-                                <input type="number" id="peso" class="form-control" required step="0.1">
+            <div class="row">
+                <!-- formulário -->
+                <section class="col-12 col-md-6">
+                    <div class="container">
+                        <h2>Formulário</h2>
+                        <hr>
+                        <form>
+                            <div class="row">
+                                <!-- nome -->
+                                <div class="col-12 mb-3">
+                                    <label class="form-label">Nome:</label>
+                                    <input type="text" class="form-control" id="nome">
+                                </div>
+                                <!-- data de nascimento -->
+                                <div class="col-12 col-lg-8 mb-3">
+                                    <label class="form-label">Data de Nascimento:</label>
+                                    <input type="date" class="form-control" id="nascimento">
+                                </div>
+                                <!-- gênero -->
+                                <div class="col-12 col-lg-8 mb-3">
+                                    <label class="form-label">Gênero:</label>
+                                    <select class="form-select" id="genero">
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
+                                        <option value="Outro">Outro</option>
+                                        <option value="Não desejo informar">Não desejo informar</option>
+                                    </select>
+                                </div>
+                                <!-- e-mail -->
+                                <div class="col-12 mb-3">
+                                    <label class="form-label">E-mail:</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <!-- telefone -->
+                                <div class="col-12 col-md-9 mb-3">
+                                    <label class="form-label">Telefone:</label>
+                                    <input type="tel" class="form-control" id="telefone">
+                                </div>
+                                <!-- peso -->
+                                <div class="col-12 col-md-4 mb-3">
+                                    <label class="form-label">Peso:</label>
+                                    <input type="number" class="form-control" id="peso" step="0.01">
+                                </div>
+                                <!-- altura -->
+                                <div class="col-12 col-md-4 mb-3">
+                                    <label class="form-label">Altura:</label>
+                                    <input type="number" class="form-control" id="altura" step="0.01">
+                                </div>
+                                <!-- botão -->
+                                <div class="d-flex justify-content-center mt-5 mb-5">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
                             </div>
-
-                            <div class="col-md-4 mb-3">
-                                <label class="form-label">Altura(m):</label>
-                                <input type="number" id="Altura" class="form-control" required step="0.01">
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary w 100">Calcular IMC</button>
+                        </form>
                     </div>
-                </div>
-                    
-                </form>
+                </section>
+                <!-- resutado -->
+                <section class="col-12 col-md-6">
+                    <div class="container">
+                        <h2>Resultado</h2>
+                        <hr class="mb-5">
+                        <h3 id="nomeResult"></h3>
+                        <h3 id="nascimentoResult"></h3>
+                        <h3 id="generoResult"></h3>
+                        <h3 id="emailResult"></h3>
+                        <h3 id="telefoneResult"></h3>
+                        <h3 id="pesoResult"></h3>
+                        <h3 id="alturaResult"></h3>
+                        <h3 id="imcResult"></h3>
+                    </div>
+                </section>
             </div>
         </div>
-        <!--resultado-->
-        <div class="card shadow result-box" id="resultadoBox">
-            <div class="card-body">
-                <h3 class="mb-3">Resultado</h3>
+    </main>
 
-                <p><strong>Nome:</strong><span id="rNome"></span></p>
-                <p><strong>Data de nascimento:</strong><span id="rNascimento"></span></p>
-                <p><strong>Gênero:</strong><span id="rGênero"></span></p>
-                <p><strong>E-mail:</strong><span id="rEmail"></span></p>
-                <p><strong>Telefone:</strong><span id="Telefone"></span></p>
-                <p><strong>Peso:</strong><span id="rPeso"></span>kg</p>
-                <p><strong>Altura:</strong><span id="rAltura"></span></p>
-                <p><strong>IMC:</strong><span id="rIMC"></span></p>
-                <p><strong>Diagnóstico:</strong><span id="rDiagnóstico"></span></p>
-            </div>
-        </div>
-     </div>
-     <!--JavaScript-->
-     <script>
-        document.getElementById("formIMC").addEventListener("Submit", function(e){e.preventDefault();
-
-            //coletando os dados
-            let nome=document.getElementById("nome").value;
-            let nascimento=document.getElementById("nascimento").value;
-            let gênero=document.getElementById("genero").value;
-            let email=document.getElementById("email").value;
-            let telefone=document.getElementById("telefone").value;
-            let peso= parseFloat(document.getElementById("peso").value);
-            let Altura= parseFloat(document.getElementById("Altura").value);
-
-            //IMC
-            let imc = peso = (peso / (altura * altura)).toFixed(2);
-
-            //diagnóstico
-            let diag = "";
-            if (imc < 18.5) diag = "abaixo do peso";
-            else if (imc <24.9) diag ="Peso normal";
-            else if (imc <29.9) diag ="Sobrepeso";
-            else if (imc <34.9) diag = "Obesidade grau 1";
-            else if (imc <39.9) diag = "obesidade grau 2";
-            else diag = "Obesidade móbida";
-
-            //exibindo
-            document.getElementById("rNome").innerText = nome;
-            document.getElementById("rNascimento").innerText = nascimento;
-            document.getElementById("rGenero").innerText = genero;
-            document.getElementById("rEmail").innerText = email;
-            document.getElementById("rTelefone").innerText = telefone;
-            document.getElementById("rPeso").innerText = peso;
-            document.getElementById("rAltura").innerText = altura;
-            document.getElementById("rIMC").innerText = imc;
-            document.getElementById("rDiag").innerText = diag;
-
-            //Mostrar card
-            document.getElementById("resultadoBox").style.display = "block";
-         
-        })
-     </script>
+    <!-- js bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    
+    <!-- meu js -->
+    <script src="js/codigo.js"></script>
 </body>
+
 </html>
