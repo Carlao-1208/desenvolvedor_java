@@ -1,14 +1,12 @@
 package com.springfront.app.controllers;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-
 public class SpringFrontController {
     @RequestMapping("/")
-    public String index(){
+    public String index() {
         return "index";
     }
 
@@ -16,5 +14,5 @@ public class SpringFrontController {
     public String formulario() {
         return "form";
     }
-
 }
+
