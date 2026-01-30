@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="author" content="Alex Machado Ribeiro">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Formulário HTML</h1>
+    <hr>
+
+    <!-- formulário -->
+    <form>
+        <label>Nome:</label><br>
+        <input type="text" maxlength="20" placeholder="Digite até 20 caracteres" value="Fulano" required><br><br>
+        <label>Idade:</label><br>
+        <input type="number" value="18" min="12" max="65"><br><br>
+        <label>Peso:</label><br>
+        <input type="number" value="20" step="0.01"><br><br>
+        <label>Data:</label>
+        <input type="date"><br><br>
+        <label>E-mail:</label><br>
+        <input type="email" placeholder="usuario@servidor.com"><br><br>
+        <label>Senha:</label><br>
+        <input type="password" placeholder="Informe a senha"><br><br>
+        <label>Escolaridade:</label><br>
+        <select>
+            <option>Escolha uma opção...</option>
+            <option>Nível Fundamental</option>
+            <option>Nível Médio</option>
+            <option>Nível Superior</option>
+            <option>Pós-Graduação</option>
+            <option>Mestrado</option>
+            <option>Doutorado</option>
+        </select><br><br>
+        <label>Enviar arquivo:</label><br>
+        <input type="file"><br><br>
+
+        <!-- botão de envio -->
+        <button type="submit">Enviar</button>
+
+        <br><br>
+
+        <!-- botão de reset -->
+        <button type="reset">Limpar</button>
+    </form>
