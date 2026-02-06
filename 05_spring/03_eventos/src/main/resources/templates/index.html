@@ -1,21 +1,42 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Eventos Spring</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body>
-    <!-- header -->
-    <header th:replace="~{navbar :: navbar}"></header>
 
-    <!-- main -->
-    <main>
-        <div class="container">
-            <img src="img/home.png" alt="Home" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eventos Spring</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- header -->
+  <header th:replace="~{navbar :: navbar}"></header>
+
+  <!-- main -->
+  <main>
+    <div class="container">
+      <h1>Próximos Eventos</h1>
+      <hr />
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3" th:each="evento : ${eventos}">
+          <!-- card -->
+          <div class="card mt-5" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title" th:text="${evento.nome}"></h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">ID: <span th:text="${evento.idEvento}"></span></h6>
+              <div class="card-text">Local: <span th:text="${evento.local}"></span>.</div>
+              <div class="card-text">Data: <span th:text="{#temporals.format(evento.data, 'dd/MM/yyyy')}"></span>.</div>
+              <div class="card-text">Hora: <span th:text="${evento.hora}"></span>.</div>
+            </div>
+          </div>
         </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
