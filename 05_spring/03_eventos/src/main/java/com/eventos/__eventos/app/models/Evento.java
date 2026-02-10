@@ -1,26 +1,25 @@
-package com.eventos.__eventos.app.models;
+package com.eventos.app.models;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-@Entity
 
+@Entity
 public class Evento implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private long idEvento;
     private String nome;
+    private String local;
     private LocalDate data;
     private LocalTime hora;
-    private String local;
 
     public Evento() {
     }
@@ -41,6 +40,14 @@ public class Evento implements Serializable {
         this.nome = nome;
     }
 
+    public String getLocal() {
+        return this.local;
+    }
+
+    public void setLocal(String local) {
+        this.local = local;
+    }
+
     public LocalDate getData() {
         return this.data;
     }
@@ -56,13 +63,4 @@ public class Evento implements Serializable {
     public void setHora(LocalTime hora) {
         this.hora = hora;
     }
-
-    public String getLocal() {
-        return this.local;
-    }
-
-    public void setLocal(String local) {
-        this.local = local;
-    }
-
 }

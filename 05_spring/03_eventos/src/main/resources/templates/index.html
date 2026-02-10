@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-br">
 
@@ -26,8 +27,10 @@
               <h5 class="card-title" th:text="${evento.nome}"></h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">ID: <span th:text="${evento.idEvento}"></span></h6>
               <div class="card-text">Local: <span th:text="${evento.local}"></span>.</div>
-              <div class="card-text">Data: <span th:text="{#temporals.format(evento.data, 'dd/MM/yyyy')}"></span>.</div>
+              <div class="card-text">Data: <span th:text="${#temporals.format(evento.data, 'dd/MM/yyyy')}"></span>.</div>
               <div class="card-text">Hora: <span th:text="${evento.hora}"></span>.</div>
+              <a th:href="@{/editarEvento/{id}(id=${evento.idEvento})}" class="card-link">Editar</a>
+              <a href="#" class="card-link">Excluir</a>
             </div>
           </div>
         </div>

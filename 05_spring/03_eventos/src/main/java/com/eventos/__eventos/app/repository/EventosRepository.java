@@ -1,11 +1,9 @@
-package com.eventos.__eventos.app.repository;
+package com.eventos.app.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.eventos.__eventos.app.models.Evento;
+import com.eventos.app.models.Evento;
 
 public interface EventosRepository extends CrudRepository<Evento, String> {
-    
-
+    Evento findByIdEvento(long idEvento);
 }
-
