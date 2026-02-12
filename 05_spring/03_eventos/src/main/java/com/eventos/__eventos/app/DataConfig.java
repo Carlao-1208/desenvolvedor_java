@@ -1,5 +1,5 @@
 
-package com.eventos.app;
+package com.eventos.__eventos.app;
 
 import javax.sql.DataSource;
 

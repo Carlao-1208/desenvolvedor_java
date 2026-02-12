@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html xmlns:th="http://www.thymeleaf.org"> 
+<body> 
+    <h1>Minhas Tarefas</h1> 
+    <table> 
+        <thead> 
+            <tr> 
+                <th>Descrição</th> 
+            </tr> 
+        </thead> 
+        <tbody> 
+            <!-- Iteração sobre a lista enviada pelo Controller --> 
+            <tr th:each="tarefa : ${listaTarefas}"> 
+                <td th:text="${tarefa.descricao}">Descrição da Tarefa</td> 
+            </tr> 
+        </tbody> 
+    </table> 
+     
+    <a href="/logout">Sair do Sistema</a> 
+</body> 
+</html>
