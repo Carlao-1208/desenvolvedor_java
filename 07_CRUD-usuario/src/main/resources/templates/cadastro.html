@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+ <title>Cadastro de Usuário</title>
+</head>
+<body>
+ <h2>Novo Usuário</h2>
+ 
+ <form th:action="@{/salvarUsuario}" method="post">
+ <div>
+ <label>Login (ID):</label>
+ <input type="text" name="login" required/>
+ </div>
+ <div>
+ <label>Nome Completo:</label>
+ <input type="text" name="nomeCompleto" required/>
+ </div>
+ <div>
+ <label>Senha:</label>
+ <input type="password" name="senha" required/>
+ </div>
+ <button type="submit">Cadastrar</button>
+ </form>
+ 
+ <a href="/login">Voltar para Login</a>
+</body>
+</html>

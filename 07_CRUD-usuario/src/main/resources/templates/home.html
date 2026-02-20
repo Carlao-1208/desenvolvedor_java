@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+ <title>Painel Principal</title>
+</head>
+<body>
+ <h1>Bem-vindo ao Sistema!</h1>
+ 
+ <h3>Usuários Cadastrados:</h3>
+ <table border="1">
+ <thead>
+ <tr>
+ <th>Login</th>
+ <th>Nome</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr th:each="u : ${usuarios}">
+ <td th:text="${u.login}">login</td>
+ <td th:text="${u.nomeCompleto}">nome</td>
+ </tr>
+ </tbody>
+ </table>
+ <br/><br/>
+ 
+ <!-- Botão de Logout -->
+ <!-- Por segurança, logout deve ser um POST em configurações padrão -->
+ <form th:action="@{/logout}" method="post">
+ <button type="submit" style="background-color: salmon;">Sair do Sistema 
+(Logoff)</button>
+ </form>
+</body>
+</html>
