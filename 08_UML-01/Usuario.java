@@ -5,13 +5,17 @@ public class Usuario {
     private long idUsuario;
     private String nome;
     private LocalDate dataNascimento;
-    private String email;
+    protected String email;
 
     public Usuario(long idUsuario, String nome, LocalDate dataNascimento, String email) {
         this.idUsuario = idUsuario;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.email = email;
+    }
+
+    public Usuario(long idPessoa, String email2, String telefone) {
+        //TODO Auto-generated constructor stub
     }
 
     public String fazerLogin(String login, String senha) {
@@ -21,5 +25,10 @@ public class Usuario {
         } else {
             return "Login ou senha incorretos";
         }
+    }
+
+    public void exibirDados() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'exibirDados'");
     }
 }
